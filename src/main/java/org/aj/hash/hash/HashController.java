@@ -37,6 +37,13 @@ public class HashController {
 		return metrixMap;
 	}
 	
+	@RequestMapping(path="/usercount",produces=MediaType.APPLICATION_JSON_VALUE)
+	public Map<String, String> getUsercount() {
+		Map<String, String> metrixMap = new HashMap<>();
+		metrixMap.put("temperature", Integer.toString(new Random().nextInt(5)+40));
+		return metrixMap;
+	}
+	
 	@RequestMapping(path="/humidity",produces=MediaType.APPLICATION_JSON_VALUE)
 	public Map<String, String> getHumidity() {
 		Map<String, String> metrixMap = new HashMap<>();
